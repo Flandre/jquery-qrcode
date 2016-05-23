@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html>
 <head lang="en">
   <meta charset="UTF-8">
@@ -9,8 +10,18 @@
 <div id="qrcode">
 
 </div>
+<script src="qrcode.js"></script>
+<script>
 
-<script src="jquery.js"></script>
+  document.getElementById('build').onclick = function(){
+    new QRCode(document.getElementById("qrcode"), {
+      width: 200,
+      height: 200,
+      text: document.getElementById('qrinfo').value
+    })
+  }
+</script>
+<!--script src="jquery.js"></script>
 <script src="jqeury_qrcode.js"></script>
 <script>
   $('#build').on('click', function(){
@@ -21,6 +32,6 @@
       text: $('#qrinfo').val()
     })
   })
-</script>
+</script-->
 </body>
 </html>
