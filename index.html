@@ -12,6 +12,9 @@
 </div>
 <script src="qrcode.js"></script>
 <script>
+  document.getElementById('qrinfo').onfocus = function(){
+    this.value = '';
+  };
 
   document.getElementById('build').onclick = function(){
     document.getElementById("qrcode").innerHTML = '';
